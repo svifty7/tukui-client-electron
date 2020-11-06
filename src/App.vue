@@ -1,32 +1,50 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div id="app"
+         class="app"
+    >
+        <client-switcher/>
     </div>
-    <router-view/>
-  </div>
 </template>
 
+<script>
+    import ClientSwitcher from '@/components/ClientSwitcher';
+
+    export default {
+        name: 'App',
+        components: { ClientSwitcher },
+    };
+</script>
+
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+    @import "~normalize.css/normalize.css";
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+    * {
+        box-sizing: border-box;
+        outline: none;
     }
-  }
-}
+
+    html, body {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        line-height: 20px;
+        font: {
+            family: 'Exo 2', sans-serif;
+            weight: 400;
+            size: 16px;
+        };
+    }
+
+    #app {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #2c3e50;
+        width: 100%;
+        min-height: 100%;
+    }
 </style>

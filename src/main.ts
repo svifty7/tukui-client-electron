@@ -6,7 +6,8 @@ import store from './store';
 Vue.config.productionTip = false;
 
 new Vue({
-  router,
-  store,
-  render: (h) => h(App),
+    router,
+    store,
+    // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+    render: h => h(App),
 }).$mount('#app');
