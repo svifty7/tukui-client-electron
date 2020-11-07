@@ -12,5 +12,7 @@ module.exports = {
     filenameHashing: false,
     css: {
         extract: false
-    }
+    },
+    lintOnSave: true,
+    runtimeCompiler: true,
 }

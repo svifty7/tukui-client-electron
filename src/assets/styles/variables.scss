@@ -1,0 +1,23 @@
+// Colors
+$white: #ffffff;
+$black: #2c3e50;
+$green: #4fc08d;
+
+// Animation
+@mixin css_anim($item: all, $time: .3s, $style: ease-in-out, $timeout: 0s) {
+  transition: $item $style $time;
+}
+
+.fade {
+  &-enter, &-leave-to {
+    opacity: 0;
+  }
+
+  &-enter-to, &-leave {
+    opacity: 1;
+  }
+
+  &-enter-active, &-leave-active {
+    @include css_anim();
+  }
+}

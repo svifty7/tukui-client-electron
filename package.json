@@ -15,6 +15,7 @@
   },
   "main": "background.js",
   "dependencies": {
+    "axios": "^0.21.0",
     "core-js": "^3.6.5",
     "normalize.css": "^8.0.1",
     "vue": "^2.6.11",
@@ -59,8 +60,7 @@
   },
   "license": "MIT",
   "lint-staged": {
-    "*.{js,jsx,vue,ts,tsx}": [
-      "vue-cli-service lint",
+    "*.{js,vue,ts}": [
       "git add"
     ]
   },
